@@ -1,0 +1,103 @@
+/* Colores que vamos a utilizar */
+:root {
+    --fondo-izquierda: #D8C7AE;
+    --enlaces: #A58B6B;
+    --fondo-cabecera: #F3EBDD;
+    --bordes: #C5AD8D;
+    --titulos: #292929;
+    --fondo-blanco: #FFFFFF;
+}
+
+/* Quitar los márgenes y espacios que vienen por defecto */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos para toda la página */
+body {
+    background-color: var(--fondo-blanco); /* Color de fondo */
+    font-family: Arial, sans-serif; /* Tipo de letra */
+    color: var(--titulos); /* Color del texto */
+}
+
+/* Contenedor principal del CV */
+.cv {
+    display: grid;
+    grid-template-columns: 30% 70%; /* Primera columna del 30% y segunda del 70% */
+    grid-template-rows: 250px 1fr; /* Primera fila de 250px y segunda ocupa el espacio restante */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    padding: 30px;
+    background-color: var(--fondo-blanco);
+}
+
+/* Foto */
+.foto {
+    grid-column: 1; /* Colocamos la foto en la primera columna */
+    grid-row: 1; /* Colocamos la foto en la primera fila */
+    display: flex; /* Utilizamos Flexbox para colocar la imagen */
+    align-items: center; /* Centramos la imagen verticalmente */
+    padding-left: 40px;
+    background-color: var(--fondo-izquierda);
+}
+
+/* Tamaño de la foto */
+.foto img {
+    width: 200px; 
+    height: 200px; 
+}
+
+/* Parte superior */
+header {
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column; /* Colocamos los elementos uno debajo de otro */
+    justify-content: center; /* Centramos el contenido verticalmente */
+    padding: 20px;
+    background-color: var(--fondo-cabecera);
+}
+
+/* Columna izquierda */
+aside {
+    grid-column: 1;
+    grid-row: 2;
+    padding: 20px;
+    background-color: var(--fondo-izquierda);
+}
+
+/* Parte principal del CV */
+main {
+    grid-column: 2;
+    grid-row: 2;
+    padding: 20px;
+    background-color: var(--fondo-blanco);
+}
+
+/* Color de h1 y h2 */
+h1, h2 {
+    color: var(--titulos);
+}
+
+/* Estilos de los párrafos */
+p {
+    margin-bottom: 10px;
+    line-height: 1;
+}
+
+/* Espacio entre los títulos h2 y el resto */
+h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Color de los enlaces */
+a {
+    color: var(--enlaces);
+}
+
+/* Cambiar el color del enlace cuando pasamos el ratón por encima */
+a:hover {
+    color: var(--bordes);
+}
